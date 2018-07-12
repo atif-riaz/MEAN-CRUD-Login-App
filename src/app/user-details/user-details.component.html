@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="bring-left">Hi {{ user.firstName }}!</h1>
+  <div class="row">
+    <div class="col-md-6">
+        <div class="form-group bring-left">
+          <label>First Name:</label>
+          <p> {{ user.firstName }}</p>
+        </div>
+        <div class="form-group bring-left">
+          <label>Last Name:</label>
+          <p> {{ user.lastName }}</p>
+        </div>
+        <div class="form-group bring-left">
+          <label>Email:</label>
+          <p> {{ user.email }}</p>
+        </div>
+        <div class="form-group bring-left">
+          <a [routerLink]="['/user-edit', user._id]" class="btn btn-success">EDIT</a>
+          <button class="btn btn-danger" type="button" (click)="deleteUser(user._id)">DELETE</button>
+        </div>
+    </div>
+  </div>
+  <h4 class="bring-left"><a [routerLink]="['/']" class="">Logout</a></h4>
+</div>

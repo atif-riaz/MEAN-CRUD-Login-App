@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Welcome to Login App</h1>
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+      <form (ngSubmit)="loginUser()" #userForm="ngForm">
+        <div class="form-group">
+          <!-- <label for="name">Email</label> -->
+          <input type="email" class="form-control" [(ngModel)]="user.email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <!-- <label for="name">Password</label> -->
+          <input type="password" class="form-control" [(ngModel)]="user.password" name="password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <h4>Not a member? Sign up <a [routerLink]="['/user-create']" class="">here</a></h4>
+</div>

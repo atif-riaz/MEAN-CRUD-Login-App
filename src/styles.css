@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+.jumbotron h1 {
+    font-size: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.jumbotron ..bring-left h1 {
+	padding-bottom: 50px;
+}
+
+.jumbotron p {
+    margin-bottom: 0px;
+    font-size: 21px;
+    display: inline-block;
+    padding-left: 8px;
+}
+
+h4 {
+	text-align: center;
+}
+
+.form-control {
+	height: 37px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.btn {
+	margin-top: 15px;
+    margin-right: 8px;
+}
+
+label {
+	margin-bottom: 0px;
+}
+
+.bring-left {
+	text-align: left !important;
+}
