@@ -25,17 +25,18 @@ export class UserEditComponent implements OnInit {
     });
   }
 
-  updateUser(id) {
+  updateUser() {
     this.http.post('/user/verifyedit', this.user)
       .subscribe(res => {
           let resStr = String(res);
-          let invalidStr = /error/gi;  
+          let invalidStr = /error501/gi;  
           if (resStr.search(invalidStr) == -1)
           {
-            this.http.post('/user', res)
+            let id = res['_id'];
+            this.http.put('/user/'+id, res)
             .subscribe(resp => {
-                let id = resp['_id'];
-                this.router.navigate(['/user-details', id]);
+                let id2 = resp['_id'];
+                this.router.navigate(['/user-details', id2]);
               }, (err) => {
                 console.log(err);
               }

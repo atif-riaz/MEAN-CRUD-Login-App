@@ -27,14 +27,16 @@ router.post('/verify', function(req, res, next) {
   });
 })
 
+/* VERIFY USER EMAIL ON UPDATE */
 router.post('/verifyedit', function(req, res, next) {
   User.find({ email : req.body.email }, function (err, post) {
     if (err) return next(err);
-    console.log(req.body.email);
-    if (post.length > 1) res.json("error501_This Email is already taken.");
+    if (post.length == 0) res.json(req.body);
+    else if (post.length > 1) res.json("error501_This Email is already taken.");
     else 
     {
-      
+      if (post[0]._id == req.body._id) res.json(req.body);
+      else res.json("error501_This Email is already taken.");
     }
   });
 })
