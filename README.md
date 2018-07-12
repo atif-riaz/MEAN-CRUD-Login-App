@@ -1,27 +1,25 @@
-# Login App
+# MEAN CRUD Login App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project is a registration/login web app built around the MEAN stack.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm install` to install all the dependencies.
 
-## Running unit tests
+Run `mongod` in a separate command window to host the MongoDB process in the background. The process runs on port `27017` by default. If you change the port, navigate to the `server.js` file in the source directory and update the port.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm start` to build the app and navigate to `http://localhost:3000/`.
 
-## Running end-to-end tests
+## Features
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+The app is pretty straightforward with the following features:
+
+* Create new users
+* Login for existing users
+* Delete existing users
+* Update details of an existing user 
+* Validation on unique Email for new and existing users
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Navigate to `http://localhost:3000/users` for the complete user list and an admin panel for testing purposes.
